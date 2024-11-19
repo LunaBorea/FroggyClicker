@@ -1,5 +1,3 @@
-/* import enemies from './enemies.js' */
-
 let counter = 10
 
 function frogClick(){  
@@ -17,7 +15,3 @@ function frogDead(){
         click.src = "/images/frog1dead.jpg"
     }
 }
-
-
-
-
