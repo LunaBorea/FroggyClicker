@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froggy clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>FROGGY CLICKER</h1>
+    </div>
+    <main>
+        <div class="sidebar-container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <img class="navbarimg" onclick="sidebarButton('info')" src="images/PhHouse.svg" alt="" draggable="false">
+                    <img class="navbarimg" onclick="sidebarButton('upgrades')" src="images/PhStorefront.svg" alt="" draggable="false">
+                    <img class="navbarimg" onclick="sidebarButton('powerups')" src="images/PhLightning.svg" alt="" draggable="false">
+                    <img class="navbarimg" onclick="sidebarButton('settings')" src="images/PhGear.svg" alt="" draggable="false">
+                </div>
+
+                <div class="sidebar-content">
+                    <div id="sidebar-info">
+                        <h3>Frog info</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo cursus orci id dignissim. Duis mattis et mi in dignissim. Nam eget dignissim sapien. Vestibulum posuere, mauris sit amet facilisic  tincidunt, nulla orci commodo ex, eget consectetur metus libero eu massa. <br><br> Maecenas vehicula  dapibus quam, sed fermentum lectus efficitur nec. Proin ligula justo, elementum a sapien ac, facilisis mattis  lorem. Sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo cursus orci id dignissim. <br><br> Duis mattis et mi in dignissim. Nam eget dignissim sapien. Vestibulum posuere, mauris sit amet facilisic  tincidunt, nulla orci commodo ex, eget consectetur metus libero eu massa. Maecenas vehicula  dapibus quam, sed fermentum lectus efficitur nec. Proin ligula justo, elementum a sapien ac, facilisis mattis  lorem. Sed.</p>
+                    </div>
+                    <div id="sidebar-upgrades">
+                        <h1>Upgrade 1</h1>
+                        <h1>Upgrade 2</h1>
+                        <h1>Upgrade 3</h1>
+                        <h1>Upgrade 4</h1>
+                        <h1>Upgrade 5</h1>
+                    </div>
+                    <div id="sidebar-powerups">
+                        <h1>Power up 1</h1>
+                        <h1>Power up 2</h1>
+                        <h1>Power up 3</h1>
+                        <h1>Power up 4</h1>
+                    </div>
+                    <div id="sidebar-settings">
+                        <h1>Setting 1</h1>
+                        <h1>Setting 2</h1>
+                        <h1>Setting 3</h1>
+                        <h1>Setting 4</h1>
+                        <h1>Setting 5</h1>
+                        <h1>Setting 6</h1>
+                    </div>
+                </div>
+                <div class="sidebar-footer"></div>
+            </div>
+        </div>
+        
+        <div class="frog">
+            <h1 class="frogTitle">Tadpole (Level 1)</h1>
+            <div id="countervalue" class="health-bar">10 HP</div>
+            <img class="frog1" id="counterclick" onclick="frogClick()" src="images/frog.png" alt="frog" draggable="false">
+        </div>
+
+        <div class="powerups">
+            <div class="powerup-1">
+                <div class="tooltip">
+                    <button class="sword">
+                        <img src="images/sword.svg" alt="swordlogo" draggable="false">
+                    </button>
+                    <span class="tooltiptext">+#% Click Power for 15 Seconds</span>
+                </div>
+            </div>
+            <div class="powerup-2">
+                <div class="tooltip">
+                    <button>2</button>
+                    <span class="tooltiptext">+# Clicks/S for 15 Seconds</span>
+                </div>
+            </div>
+            <div class="powerup-3">
+                <div class="tooltip">
+                    <button>3</button>
+                    <span class="tooltiptext">+#% currency gained for 15 seconds</span>
+                </div>
+            </div>
+            <div class="powerup-4">
+                <div class="tooltip">
+                    <button>4</button>
+                    <span class="tooltiptext">Something something final powerup</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span id="frogLevelKills">0/10 ☠</span>
+        <div class="levels">
+            <div class="arrows"><p>⇦</p></div>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <div class="arrows"><p>⇨</p></div>
+        </div>
+    </footer> 
+    <script src="script_ui.js"></script>
+    <script src="script_game.js"></script>
+</body>
+</html>
