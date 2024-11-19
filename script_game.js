@@ -1,5 +1,3 @@
-/* import enemies from './enemies.js' */
-
 let counter = 10
 
 function frogClick(){  
@@ -21,7 +19,6 @@ function frogDead(){
         
     }
 }
-
 
 
 
