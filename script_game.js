@@ -13,10 +13,15 @@ function frogClick(){
 
 function frogDead(){
     const click = document.getElementById('counterclick')
+    const kills = document.getElementById("frogLevelKills")
+    kills++
     if(counter == 0){
         click.src = "/images/frog1dead.jpg"
+        docume
+        
     }
 }
+
 
 
 
