@@ -24,21 +24,6 @@ body {
     font-size: 20px;
 
 }
-.navbarimg {
-    height: 50px;
-    background-color: #314922;
-    border-radius: 10px;
-    box-shadow: 1px 2px 3px black;
-    cursor: pointer;
-}
-
-.navbarimg:hover {
-    background-color: #5F8547;
-}
-
-.navbarimg:active {
-    transform: translateY(1px);
-}
 
 /* Main */
 
@@ -71,19 +56,34 @@ main {
     overflow: hidden;
 }
 
+.sidebarimg {
+    height: 50px;
+    background-color: #314922;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px black;
+    cursor: pointer;
+}
+.sidebarimg:nth-of-type(1) {
+    background-color: #5F8547;
+}
+
+.sidebarimg:active {
+    transform: scale(0.97);
+}
+
 .sidebar-content {
     padding: 15px;
     overflow: scroll;    
     overflow-x: hidden;   
 }
 
-#sidebar-info {
+#sidebar-upgrades {
     display: block;
 }
-#sidebar-upgrades {
+#sidebar-powerups {
     display: none;
 }
-#sidebar-powerups {
+#sidebar-info {
     display: none;
 }
 #sidebar-settings {
@@ -156,7 +156,7 @@ main {
     cursor: pointer;
 }
 .powerups button:active {
-    transform: translateY(1px);
+    transform: scale(0.97);
 }
 
 .tooltip {
@@ -242,10 +242,3 @@ footer #frogLevelKills {
         0 16px 16px rgba(0,0,0,0.12);
     border-radius: 10px;
 }
-
-
-
-
-
-
-

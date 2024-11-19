@@ -37,3 +37,7 @@ function frogKills(){
 
 
 
+
+
+
+// Change to eventlistener

@@ -9,4 +9,4 @@ const enemies = [
     }
 ]
 
-window.enemies = enemies
+export default enemies
