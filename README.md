@@ -1,2 +1,2 @@
-# Froggy_Clicker
+# FroggyClicker
 Simple incremental game themed around a frog
