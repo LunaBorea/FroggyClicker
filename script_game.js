@@ -1,24 +1,38 @@
+const clicks = document.getElementById('counterclick')
+const element = document.getElementById("countervalue")
+const kills = document.getElementById("frogLevelKills")
 let counter = 10
 
 function frogClick(){  
-    const element = document.getElementById("countervalue")
     if(counter > 0){
         counter--
     }
     element.innerHTML = counter + ' HP'
-    frogDead()
+   changeFrog()
+   frogKills()
 }
-
-function frogDead(){
-    const click = document.getElementById('counterclick')
-    const kills = document.getElementById("frogLevelKills")
-    kills++
+function changeFrog(){
     if(counter == 0){
-        click.src = "/images/frog1dead.jpg"
-        docume
+        clicks.src = "/images/frog1dead.jpg"
         
     }
+    
 }
+function frogKills(){
+    let enemyKills = 0
+    if(counter == 0){
+        enemyKills++
+    }
+    kills.innerHTML = enemyKills  + "/10 ☠"
+}
+
+// function enemyRespawn(){
+//     clicks.addEventListener("click", ()=>{
+        
+//     })
+// }
+
+
 
 
 
