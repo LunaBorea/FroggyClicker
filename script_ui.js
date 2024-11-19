@@ -31,3 +31,5 @@ function sidebarButton(param) {
         }
     })
 }
+
+// Change to eventlistener

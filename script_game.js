@@ -15,3 +15,6 @@ function frogDead(){
         click.src = "/images/frog1dead.jpg"
     }
 }
+
+
+// Change to eventlistener
