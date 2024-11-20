@@ -2,32 +2,52 @@ const clicks = document.getElementById('counterclick')
 const element = document.getElementById("countervalue")
 const kills = document.getElementById("frogLevelKills")
 let counter = 10
+let enemyKills = 0
+
+
+    // level1 frog
 
 function frogClick(){  
     if(counter > 0){
         counter--
     }
     element.innerHTML = counter + ' HP'
-   changeFrog()
    frogKills()
 }
-function changeFrog(){
-    if(counter == 0){
-    clicks.src = "/images/frog1dead.jpg"
-    }
-    
-}
 function frogKills(){
-    let enemyKills = 0
     if(counter == 0){
-        enemyKills++
+        respawnEnemies()
+        enemyKills += 1
     }
-    kills.innerHTML = enemyKills  + "/10 ☠"
+    else if(enemyKills < 10){
+        kills.innerHTML = `${enemyKills}/10 ☠`
+    }
+    else if(enemyKills >= 10){
+        counter = 20
+        clicks.src = "/images/level2frog.jpg"
+        kills.innerHTML = `${enemyKills}/25 ☠`
+        frogClick()
+    }
 }
 
-function enemyRespawn(){
+function respawnEnemies(){
+    counter = 11
     clicks.src = "/images/frog.png"
+    frogClick()
+
 }
+
+
+// level 2 frog
+
+// function spawnLevel2Frog(){
+//     if(enemyKills == 10){
+//         enemyKills = 0
+//         spawnLevel2Frog()
+//         kills.innerHTML = `${enemyKills}/25 ☠`
+//     }
+//     respawnEnemies()
+// }
 
 
 clicks.addEventListener("click", frogClick)
