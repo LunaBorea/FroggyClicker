@@ -27,9 +27,10 @@ function frogKills(){
 
 function enemyRespawn(){
     clicks.src = "/images/frog.png"
+    counter = 10
 }
 
-
+changeFrog.addEventListener("click", enemyRespawn)
 clicks.addEventListener("click", frogClick)
 
 
