@@ -13,8 +13,7 @@ function frogClick(){
 }
 function changeFrog(){
     if(counter == 0){
-        clicks.src = "/images/frog1dead.jpg"
-        
+    clicks.src = "/images/frog1dead.jpg"
     }
     
 }
@@ -26,11 +25,12 @@ function frogKills(){
     kills.innerHTML = enemyKills  + "/10 ☠"
 }
 
-// function enemyRespawn(){
-//     clicks.addEventListener("click", ()=>{
-        
-//     })
-// }
+function enemyRespawn(){
+    clicks.src = "/images/frog.png"
+}
+
+
+clicks.addEventListener("click", frogClick)
 
 
 
@@ -38,6 +38,3 @@ function frogKills(){
 
 
 
-
-
-// Change to eventlistener
