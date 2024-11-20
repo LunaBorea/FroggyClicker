@@ -32,4 +32,14 @@ function sidebarButton(param) {
     })
 }
 
-// Change to eventlistener
+// Add event listeners to all sidebar buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const btns = document.querySelectorAll('.sidebar-header > img');
+
+    btns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const param = btn.id.replace('sidebarimg-', '');
+            sidebarButton(param);
+        });
+    });
+});
