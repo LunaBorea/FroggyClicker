@@ -1,0 +1,1 @@
+import { enemies } from 'enemies.js'
