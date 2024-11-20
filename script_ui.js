@@ -1,6 +1,6 @@
 function sidebarButton(param) {
     // Gets all sidebar contents
-    const sidebars = document.querySelectorAll('.sidebar-content > div')
+    const sidebars = document.querySelectorAll('.sidebar-content > .sidebar-subcontent')
     const btns = document.querySelectorAll('.sidebar-header > img')
 
     // Loops through each sidebar
