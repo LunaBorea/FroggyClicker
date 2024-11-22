@@ -1,9 +1,10 @@
+import enemies from "./enemies.js"
+
 const clicks = document.getElementById('counterclick')
 const element = document.getElementById("countervalue")
 const kills = document.getElementById("frogLevelKills")
 let counter = 10
 let enemyKills = 0
-
 
     // level1 frog
 
