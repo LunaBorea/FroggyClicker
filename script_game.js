@@ -12,42 +12,44 @@ function frogClick(){
         counter--
     }
     element.innerHTML = counter + ' HP'
-   frogKills()
+    if(counter == 0){
+        frogKills()
+    }
 }
+
+// function for frog kills
+
 function frogKills(){
     if(counter == 0){
-        respawnEnemies()
-        enemyKills += 1
-    }
-    else if(enemyKills < 10){
+        enemyKills++
         kills.innerHTML = `${enemyKills}/10 ☠`
     }
-    else if(enemyKills >= 10){
+    if(enemyKills >= 10){
         counter = 20
         clicks.src = "/images/level2frog.jpg"
         kills.innerHTML = `${enemyKills}/25 ☠`
         frogClick()
     }
+    else{
+        respawnEnemies()
+    }
 }
+
+// function for respawning enemies level 1
 
 function respawnEnemies(){
-    counter = 11
+    counter = 10
     clicks.src = "/images/frog.png"
-    frogClick()
-
+    element.innerHTML = `${counter} HP`
 }
 
 
-// level 2 frog
+// spawn level 2 frog
 
-// function spawnLevel2Frog(){
-//     if(enemyKills == 10){
-//         enemyKills = 0
-//         spawnLevel2Frog()
-//         kills.innerHTML = `${enemyKills}/25 ☠`
-//     }
-//     respawnEnemies()
-// }
+function spawnLevel2Frog(){
+    counter = 20
+    clicks.src = "/images/level2frog.jpg"
+}
 
 
 clicks.addEventListener("click", frogClick)
