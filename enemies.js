@@ -2,8 +2,8 @@ const enemies = [
     {
         name: 'Tadpole',
         stats: {
-            hp: 20,
-            gold: [1, 3]
+            hp: 10,
+            gold: [1, 2, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         img: 'images/tadpole.png'
@@ -11,7 +11,7 @@ const enemies = [
     {
         name: 'Young Frog',
         stats: {
-            hp: 35,
+            hp: 20,
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
