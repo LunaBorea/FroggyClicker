@@ -6,16 +6,19 @@ const enemies = [
             gold: [1, 2, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/tadpole.png'
+        img: 'images/frog.png',
+        count: 10
+
     },
     {
         name: 'Young Frog',
         stats: {
             hp: 20,
-            gold: [1, 3]
+            gold: [5, 6, 7, 8, 9,]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/youngfrog.png'
+        img: 'images/level2frog.jpg',
+        count: 20
     },
     {
         name: 'Adult Frog',

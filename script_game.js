@@ -1,5 +1,6 @@
 import enemies from "./enemies.js"
 
+const EnemyName = document.querySelector(".frogTitle")
 const clicks = document.getElementById('counterclick')
 const element = document.getElementById("countervalue")
 const kills = document.getElementById("frogLevelKills")
@@ -7,65 +8,85 @@ const gold = document.getElementById("goldAmount")
 let counter = 10
 let enemyKills = 0
 let goldIngots = 0
+let damagePerHit = 1
+let enemy = 0
 
     // level1 frog
 
 function frogClick(){  
     if(counter > 0){
-        counter--
+        counter -= damagePerHit
     }
     element.innerHTML = counter + ' HP'
-    if(counter == 0){
+    if(counter <= 0){
         frogKills()
-        EnemyLevelOnegoldDrop()
+        EnemygoldDrop()
     }
     
 }
 
 // function for enemy Level One gold
 
-function EnemyLevelOnegoldDrop(){
+function EnemygoldDrop(){
     const randomgoldlevelone = Math.floor(Math.random() * enemies[0].stats.gold.length)
 
-    const goldDropped = enemies[0].stats.gold[randomgoldlevelone]
+    const goldDropped = enemies[enemy].stats.gold[randomgoldlevelone]
     goldIngots += goldDropped
     gold.innerHTML = `${goldIngots}`
 }
 
 // function for frog kills
 function frogKills(){
-    if(counter == 0){
-        enemyKills++
-        kills.innerHTML = `${enemyKills}/10 ☠`
+    enemyKills++
+    const enemyObject = enemies[enemy]
+    if(enemyKills >= enemyObject.count){
+        enemy++
+        enemyKills = 0
     }
-    // spawn level 2 frog
-    if(enemyKills >= 10){
-        const enemyLevelTwo = enemies[1]
-
-        counter = enemyLevelTwo.stats.hp
-        clicks.src = "/images/level2frog.jpg"
-        kills.innerHTML = `${enemyKills}/25 ☠`
-        frogClick()
-    }
-    else{
-        respawnEnemiesLevelOne()
-    }
+    respawnEnemy()
 }
 
-// function for respawning enemies level 1
+// function for respawning enemies
 
-function respawnEnemiesLevelOne(){
-    const enemyLevelOne = enemies[0]
-    counter = enemyLevelOne.stats.hp
-    clicks.src = "/images/frog.png"
+function respawnEnemy(){
+    const enemyObject = enemies[enemy]
+    counter = enemyObject.stats.hp
+    clicks.src = enemyObject.img
     element.innerHTML = `${counter} HP`
+    kills.innerHTML = `${enemyKills}/${enemyObject.count} ☠`
+    EnemyName.innerHTML = enemyObject.name
 }
 
-// function for gold drop
+// swordupgrade
+
+let costForSwordUpgrade = 15
+
+const swordType = document.querySelectorAll(".swordType")
+const swordUpgradeButton = document.getElementById("swordUpgrade-btn")
+const swordGoldDisplay = document.getElementById("swordGold")
+
+// function for sword upgrade
+
+function swordUpgrade(){
+    if(goldIngots >= costForSwordUpgrade){
+        damagePerHit++
+        goldIngots -= costForSwordUpgrade
+        costForSwordUpgrade = Math.floor(costForSwordUpgrade * 2)
+        gold.innerHTML = goldIngots
+        swordGoldDisplay.innerHTML = costForSwordUpgrade
+        swordType.forEach(sword => {
+            sword.innerHTML = "Stone"
+        })
+    } else {
+        alert("You dont have enough Gold")
+    }
+    
+}
 
 
-
+swordUpgradeButton.addEventListener("click", swordUpgrade)
 clicks.addEventListener("click", frogClick)
+
 
 
 
