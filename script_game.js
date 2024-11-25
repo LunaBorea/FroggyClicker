@@ -17,8 +17,19 @@ function frogClick(){
     element.innerHTML = counter + ' HP'
     if(counter == 0){
         frogKills()
-        goldDrop()
+        EnemyLevelOnegoldDrop()
     }
+    
+}
+
+// function for enemy Level One gold
+
+function EnemyLevelOnegoldDrop(){
+    const randomgoldlevelone = Math.floor(Math.random() * enemies[0].stats.gold.length)
+
+    const goldDropped = enemies[0].stats.gold[randomgoldlevelone]
+    goldIngots += goldDropped
+    gold.innerHTML = `${goldIngots}`
 }
 
 // function for frog kills
@@ -52,10 +63,7 @@ function respawnEnemiesLevelOne(){
 
 // function for gold drop
 
-function goldDrop(){
-    const randomgoldlevelone = Math.floor(Math.random() * enemies[0].stats.gold.length)
-    gold.innerHTML = `${randomgoldlevelone}`
-}
+
 
 clicks.addEventListener("click", frogClick)
 
