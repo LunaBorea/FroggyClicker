@@ -14,7 +14,7 @@ const enemies = [
         name: 'Young Frog',
         stats: {
             hp: 20,
-            gold: [5, 6, 7, 8, 9,]
+            gold: [3, 4, 5, 6]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         img: 'images/level2frog.jpg',
@@ -23,20 +23,22 @@ const enemies = [
     {
         name: 'Adult Frog',
         stats: {
-            hp: 54,
+            hp: 35,
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/adultfrog.png'
+        img: 'images/adultfrog.png',
+        count: 50
     },
     {
         name: 'Squire Frog',
         stats: {
-            hp: 77,
+            hp: 50,
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/squire.png'
+        img: 'images/squire.png',
+        count: 50
     },
     {
         name: 'Knight Frog',
@@ -45,7 +47,8 @@ const enemies = [
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/knightfrog.png'
+        img: 'images/knightfrog.png',
+        count: 50
     },
     {
         name: 'Baron Frog',
@@ -54,7 +57,8 @@ const enemies = [
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/baronfrog.png'
+        img: 'images/baronfrog.png',
+        count: 50
     },
     {
         name: 'Count Frog',
@@ -63,7 +67,8 @@ const enemies = [
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/countfrog.png'
+        img: 'images/countfrog.png',
+        count: 50
     },
     {
         name: 'Duke Frog',
@@ -72,7 +77,8 @@ const enemies = [
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/dukefrog.png'
+        img: 'images/dukefrog.png',
+        count: 50
     },
     {
         name: 'King Frog',
@@ -81,7 +87,8 @@ const enemies = [
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/kingfrog.png'
+        img: 'images/kingfrog.png',
+        count: 50
     },
     {
         name: 'Emperor Frog',
@@ -90,7 +97,8 @@ const enemies = [
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/emperorfrog.png'
+        img: 'images/emperorfrog.png',
+        count: 50
     },
     {
         name: 'Frog God',
@@ -99,8 +107,11 @@ const enemies = [
             gold: [1, 3]
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        img: 'images/froggod.png'
+        img: 'images/froggod.png',
+        count: 50
     },
 ]
+
+
 
 export default enemies

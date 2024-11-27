@@ -1,4 +1,5 @@
 import enemies from "./enemies.js"
+import swords from "./upgrades.js"
 
 const EnemyName = document.querySelector(".frogTitle")
 const clicks = document.getElementById('counterclick')
@@ -28,9 +29,9 @@ function frogClick(){
 // function for enemy Level One gold
 
 function EnemygoldDrop(){
-    const randomgoldlevelone = Math.floor(Math.random() * enemies[0].stats.gold.length)
+    const randomgold = Math.floor(Math.random() * enemies[enemy].stats.gold.length)
 
-    const goldDropped = enemies[enemy].stats.gold[randomgoldlevelone]
+    const goldDropped = enemies[enemy].stats.gold[randomgold]
     goldIngots += goldDropped
     gold.innerHTML = `${goldIngots}`
 }
@@ -67,21 +68,37 @@ const swordGoldDisplay = document.getElementById("swordGold")
 
 // function for sword upgrade
 
+let swordLevel = 0
+
 function swordUpgrade(){
     if(goldIngots >= costForSwordUpgrade){
+        swordLevel++
         damagePerHit++
         goldIngots -= costForSwordUpgrade
         costForSwordUpgrade = Math.floor(costForSwordUpgrade * 2)
         gold.innerHTML = goldIngots
         swordGoldDisplay.innerHTML = costForSwordUpgrade
         swordType.forEach(sword => {
-            sword.innerHTML = "Stone"
+            sword.innerHTML = `${swords[swordLevel].swordtype}`
         })
     } else {
         alert("You dont have enough Gold")
     }
     
 }
+
+// mercenary upgrade
+
+// const mercAmount = document.getElementById("mercAmount")
+// const merButton = document.getElementById("mercButton")
+// const mercGold = document.getElementById("mercCost")
+
+// let costForMerc = 50
+
+
+// function mercenaryUpgrade(){
+
+// }
 
 
 swordUpgradeButton.addEventListener("click", swordUpgrade)
