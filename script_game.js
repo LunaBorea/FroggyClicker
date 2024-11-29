@@ -105,7 +105,7 @@ function mercenaryUpgrade(){
         mercDamagePerSec++
         goldIngots -= costForMerc
         gold.innerHTML = goldIngots
-        costForMerc = Math.floor(costForMerc * 1.15)
+        costForMerc = Math.floor(costForMerc * 1.08)
         mercGold.innerHTML = costForMerc
         mercInterval = setInterval(mercenaryInterval, 1000)
         mercBoughts++
