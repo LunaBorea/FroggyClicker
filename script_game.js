@@ -93,7 +93,7 @@ const mercAmount = document.getElementById("mercAmount")
 const merButton = document.getElementById("mercButton")
 const mercGold = document.getElementById("mercCost")
 
-let costForMerc = 50
+let costForMerc = 25
 let mercBoughts = 0
 let mercDamagePerSec = 0
 let mercInterval
@@ -105,7 +105,7 @@ function mercenaryUpgrade(){
         mercDamagePerSec++
         goldIngots -= costForMerc
         gold.innerHTML = goldIngots
-        costForMerc = Math.floor(costForMerc * 1.5)
+        costForMerc = Math.floor(costForMerc * 1.15)
         mercGold.innerHTML = costForMerc
         mercInterval = setInterval(mercenaryInterval, 1000)
         mercBoughts++
