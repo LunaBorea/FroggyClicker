@@ -119,6 +119,10 @@ function mercenaryUpgrade(){
 function mercenaryInterval(){
     counter -= mercDamagePerSec
     element.innerHTML = counter + ' HP'
+    if(counter <= 0){
+        respawnEnemy()
+        frogKills()
+    }
 }
 
 merButton.addEventListener("click", mercenaryUpgrade)
