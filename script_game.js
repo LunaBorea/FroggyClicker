@@ -117,12 +117,7 @@ function mercenaryUpgrade(){
 // function for starting interval after bought upgrade
 
 function mercenaryInterval(){
-    counter -= mercDamagePerSec
-    element.innerHTML = counter + ' HP'
-    if(counter <= 0){
-        respawnEnemy()
-        frogKills()
-    }
+    frogClick()
 }
 
 merButton.addEventListener("click", mercenaryUpgrade)
