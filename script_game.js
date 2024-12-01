@@ -93,13 +93,39 @@ const mercAmount = document.getElementById("mercAmount")
 const merButton = document.getElementById("mercButton")
 const mercGold = document.getElementById("mercCost")
 
-// let costForMerc = 50
+let costForMerc = 50
+let mercBoughts = 0
+let mercDamagePerSec = 0
+let mercInterval
 
 
-// function mercenaryUpgrade(){
+function mercenaryUpgrade(){
+    if(goldIngots >= costForMerc){
+        clearInterval(mercInterval)
+        mercDamagePerSec++
+        goldIngots -= costForMerc
+        gold.innerHTML = goldIngots
+        costForMerc = Math.floor(costForMerc * 1.5)
+        mercGold.innerHTML = costForMerc
+        mercInterval = setInterval(mercenaryInterval, 1000)
+        mercBoughts++
+        mercAmount.innerHTML = mercBoughts
+    }
+    else{
+        alert("You dont have enough gold")
+    }
+}
 
-// }
+// function for starting interval after bought upgrade
 
+function mercenaryInterval(){
+    counter -= mercDamagePerSec
+    element.innerHTML = counter + ' HP'
+    if(counter <= 0){
+        frogKills()
+    }
+}
 
+merButton.addEventListener("click", mercenaryUpgrade)
 swordUpgradeButton.addEventListener("click", swordUpgrade)
 clicks.addEventListener("click", frogClick)
